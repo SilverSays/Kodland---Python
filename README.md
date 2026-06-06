@@ -1,27 +1,29 @@
-# Cave Crawler 
+# Cave Crawler 🗡️
 
-Juego de supervicencia en una cueva hecho con PyGame
-Mata monstruos, recoge monedas y usa la pausa para comprar mejoras
+Juego de sobrevivencia en una cueva hecho con PyGame.
+Mata monstruos, recoge monedas y usa la pausa para comprar mejoras.
 
 ## Requisitos y cómo correrlo
 
 **Python 3.12 (recomendado):**
-bash
+```bash
 pip install pygame
 python main.py
-
+```
 
 **Python 3.13 / 3.14 (versiones más nuevas):**
-bash
+```bash
 pip install pygame-ce
 python main.py
+```
 
-
-> Corre el juego **desde la carpeta donde está main.py**
-> La primera vez genera los sprites automáticamente en `/sprites`
+> Corré el juego **desde la carpeta donde está main.py**, no desde otra ubicación.
+> La primera vez genera los sprites automáticamente en `/sprites`.
 
 ## Controles
 
+| Tecla | Acción |
+|-------|--------|
 | WASD / Flechas | Mover |
 | SPACE | Atacar en la dirección que mirás |
 | P / ESC | Pausar / reanudar |
@@ -30,22 +32,23 @@ python main.py
 
 ## Sistema de monedas y mejoras
 
-Las monedas se recogen caminando sobre ellas y también se ganan matando enemigos
-Pausa el juego (P o ESC) para acceder a la tienda de mejoras
+Las monedas se recogen caminando sobre ellas y también se ganan matando enemigos.
+Pausá el juego (P o ESC) para acceder a la tienda de mejoras:
 
 | Tecla | Mejora | Costo |
-| 1 | Recuperar una vida | 30 monedas |
+|-------|--------|-------|
+| 1 | Recuperar una vida ❤️ | 30 monedas |
 | 2 | +Velocidad de movimiento | 20 monedas |
 | 3 | +Daño por ataque | 25 monedas |
 
-La velocidad se puede comprar hasta 3 veces. El ataque hasta 2 veces
+La velocidad se puede comprar hasta 3 veces. El ataque hasta 2 veces.
 
 ## Enemigos
 
-- **Slime** (verde): lento, siempre persigue. 2 golpes para matar
-- **Esqueleto** (blanco): más rápido, a veces se mueve random. 3 golpes para matar
+- **Slime** (verde): lento, siempre persigue. 2 golpes para matar.
+- **Esqueleto** (blanco): más rápido, a veces se mueve random. 3 golpes para matar.
 
-Los esqueletos aparecen desde la oleada 2. Cada oleada hay más enemigos
+Los esqueletos aparecen desde la oleada 2. Cada oleada hay más enemigos.
 
 ## Puntuación
 
@@ -58,11 +61,20 @@ Los sprites se dibujan con la **Tortuga** al iniciar el juego y se guardan como 
 La Tortuga es una implementación propia del sistema `turtle.Turtle()` de Python,
 pero que dibuja sobre superficies de PyGame en vez de abrir su propia ventana.
 
+Comandos que usa la Tortuga en el código:
+- `adelante(dist)` / `atras(dist)` — avanzar
+- `derecha(grados)` / `izquierda(grados)` — girar
+- `ir_a(x, y)` — saltar a una posición
+- `lapiz_arriba()` / `lapiz_abajo()` — controlar si dibuja al moverse
+- `iniciar_relleno(color)` / `terminar_relleno()` — rellenar polígonos
+- `circulo_relleno()` / `rect_relleno()` — atajos para formas comunes
+
 ## Estructura del código
 
-El main.py está dividido en dos secciones claramente separadas:
+El `main.py` está dividido en dos secciones claramente separadas:
 
-SECCIÓN 1 ---- CLASE TORTUGA Y SPRITES
+```
+SECCIÓN 1 — CLASE TORTUGA Y SPRITES
   class Tortuga          ← implementación del sistema de la Tortuga
   sprite_jugador()       ← dibuja al caballero
   sprite_slime()         ← dibuja el slime
@@ -72,7 +84,7 @@ SECCIÓN 1 ---- CLASE TORTUGA Y SPRITES
   sprite_suelo()         ← dibuja el tile del suelo
   generar_sprites()      ← guarda todo en /sprites como PNG
 
-SECCIÓN 2 ---- JUEGO
+SECCIÓN 2 — JUEGO
   class Jugador
   class Slime
   class Esqueleto
@@ -80,4 +92,4 @@ SECCIÓN 2 ---- JUEGO
   funciones auxiliares
   pantalla_menu / pausa / gameover
   main()
-
+```
