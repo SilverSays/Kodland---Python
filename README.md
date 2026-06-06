@@ -61,14 +61,6 @@ Los sprites se dibujan con la **Tortuga** al iniciar el juego y se guardan como 
 La Tortuga es una implementación propia del sistema `turtle.Turtle()` de Python,
 pero que dibuja sobre superficies de PyGame en vez de abrir su propia ventana.
 
-Comandos que usa la Tortuga en el código:
-- `adelante(dist)` / `atras(dist)` — avanzar
-- `derecha(grados)` / `izquierda(grados)` — girar
-- `ir_a(x, y)` — saltar a una posición
-- `lapiz_arriba()` / `lapiz_abajo()` — controlar si dibuja al moverse
-- `iniciar_relleno(color)` / `terminar_relleno()` — rellenar polígonos
-- `circulo_relleno()` / `rect_relleno()` — atajos para formas comunes
-
 ## Estructura del código
 
 El `main.py` está dividido en dos secciones claramente separadas:
