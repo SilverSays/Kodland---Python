@@ -1,4 +1,4 @@
-# Cave Crawler 🗡️
+# Cave Crawler 
 
 Juego de sobrevivencia en una cueva hecho con PyGame.
 Mata monstruos, recoge monedas y usa la pausa para comprar mejoras.
@@ -37,7 +37,7 @@ Pausá el juego (P o ESC) para acceder a la tienda de mejoras:
 
 | Tecla | Mejora | Costo |
 |-------|--------|-------|
-| 1 | Recuperar una vida ❤️ | 30 monedas |
+| 1 | Recuperar una vida | 30 monedas |
 | 2 | +Velocidad de movimiento | 20 monedas |
 | 3 | +Daño por ataque | 25 monedas |
 
